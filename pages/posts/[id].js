@@ -14,6 +14,7 @@ export async function getStaticProps({ params }) {
 }
 
 // paths contains the array of known paths returned by getAllPostIds(), which include the params defined by pages/posts/[id].js
+// fallback is false, so any paths not returned by getStaticPaths will result in a 404 page
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
